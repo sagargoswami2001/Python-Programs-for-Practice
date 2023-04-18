@@ -1,16 +1,15 @@
-# Python Program to find the Square Root.
-# 1st Method (Using Exponentiation)
-# num = 64
-# sr = num**(1/2)
-# print("The Square Root of the Given Number is: ", sr)
+# Write a Python Program to Find Square Root.
+def mySqrt(x):
+    left = 1
+    right = x
+    mid = 0
+    while(left <= right):
+        mid = (left + right) // 2
+        if mid * mid > x:
+            right = mid - 1
+        else:
+            left = mid + 1
+            sqrt = mid
+    return sqrt
 
-# 2nd Method (With User Inputs)
-# num = int(input("Enter a Number Here: "))
-# sr = num**(0.5)
-# print("The Square Root of the Given Number is: ", sr)
-
-# 3rd Method (Using Math Module)
-import math
-num = int(input("Enter a Number Here: "))
-sr = math.sqrt(num)
-print("The Square Root of the Given Number is", sr)
+print(mySqrt(36))
